@@ -1,0 +1,18 @@
+@startuml VideoLib
+title VideoLib
+class Video{
+    -id:int
+    -title:string
+    -duration:float
+    -keywords:List<string>
+
+    +getId():int
+    +setId(value):void
+
+    +getTitle():int
+    +setTitle(value):void
+
+    +getDuration():float
+    +setDuration(value):void
+}
+@enduml
