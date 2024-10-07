@@ -1,0 +1,7 @@
+@startuml VideoLib
+title VideoLib
+class Video{
+    -id:int
+    -title:string
+}
+@enduml
