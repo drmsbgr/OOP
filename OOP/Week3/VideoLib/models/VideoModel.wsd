@@ -15,4 +15,12 @@ class Video{
     +getDuration():float
     +setDuration(value):void
 }
+
+class PlayList:IEnumerable<Video>{
+    +playListTitle:string
+    -videos:List<Video>
+    +Add(item):void
+    +Clear():void
+    +Remove(item):bool
+}
 @enduml
