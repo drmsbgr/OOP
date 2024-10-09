@@ -29,7 +29,7 @@ namespace ConsoleApp.Models
         public void Deposit(float amount)
         {
             Balance += amount;
-            Activities.Add($"{amount}₺ yatırıldı.");
+            Activities?.Add($"{amount}₺ yatırıldı.");
         }
 
         public void Withdraw(float amount)
@@ -39,19 +39,19 @@ namespace ConsoleApp.Models
 
             if (amount > Balance)
             {
-                Activities.Add($"{Balance}₺ çekildi.");
+                Activities?.Add($"{Balance}₺ çekildi.");
                 Balance = 0;
             }
             else
             {
                 Balance -= amount;
-                Activities.Add($"{amount}₺ çekildi.");
+                Activities?.Add($"{amount}₺ çekildi.");
             }
         }
 
         public void AccountActivies()
         {
-            Activities.ForEach(x => Console.WriteLine(x));
+            Activities?.ForEach(x => Console.WriteLine(x));
         }
     }
 }
