@@ -11,28 +11,30 @@ namespace ConsoleApp.Models
 
         public Account(string fName, string lName)
         {
-            Balance = 0;
             this.FirstName = fName;
             this.LastName = lName;
-            Activities = [];
             AccountDate = DateTime.Now.ToString();
+            Activities = [$"{FullName}, banka hesabınız oluşturuldu - {AccountDate}"];
+            Balance = 0;
         }
 
         public void CheckAccount()
         {
-            Console.WriteLine("\nHESAP BİLGİLERİ");
+            Console.WriteLine("\n-----------------------");
+            Console.WriteLine("HESAP BİLGİLERİ");
             Console.WriteLine(FullName);
-            Console.WriteLine($"HESAPTAKİ PARA MİKTARI: {Balance}₺");
-            Console.WriteLine($"HESAP OLUŞTURULMA TARİHİ: {AccountDate}\n");
+            Console.WriteLine($"BAKİYE: {Balance}₺");
+            Console.WriteLine($"HESAP OLUŞTURULMA TARİHİ: {AccountDate}");
+            Console.WriteLine("-----------------------\n");
         }
 
-        public void Deposit(float amount)
+        public void Deposit(double amount)
         {
             Balance += amount;
             Activities?.Add($"{amount}₺ yatırıldı.");
         }
 
-        public void Withdraw(float amount)
+        public void Withdraw(double amount)
         {
             if (amount < 50 || amount > 10000)
                 return;
