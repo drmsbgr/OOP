@@ -28,6 +28,11 @@ public static class Program
         };
         tri.SetPosition(71, 23);
 
+        shape.Draw();
+        rect.Draw();
+        circle.Draw();
+        tri.Draw();
+
         Console.WriteLine($"dıkdortgen alan: {rect.Area}\ndıkdortgen cevre: {rect.Circumference}");
         Console.WriteLine();
         Console.WriteLine($"daıre alan: {circle.Area}\ndaıre cevre: {circle.Circumference}");
