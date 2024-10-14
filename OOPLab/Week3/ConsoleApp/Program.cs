@@ -4,9 +4,9 @@ var fName = "";
 var lName = "";
 
 Console.WriteLine("Adınızı Giriniz:");
-fName = Console.ReadLine();
+fName ??= Console.ReadLine();
 Console.WriteLine("Soyadınızı Giriniz:");
-lName = Console.ReadLine();
+lName ??= Console.ReadLine();
 
 var acc = new Account(fName, lName);
 acc.CheckAccount();
