@@ -1,6 +1,6 @@
 namespace ConsoleApp.Models;
 
-public class Triangle : Shape
+public class Triangle(int x, int y) : Shape(x, y)
 {
     public double Base { get; set; }
     public double Height { get; set; }
@@ -10,6 +10,6 @@ public class Triangle : Shape
     public override void Draw()
     {
         // base.Draw();
-        System.Console.WriteLine("Triangle has been drawed.");
+        System.Console.WriteLine("Triangle has been drawn.");
     }
 }

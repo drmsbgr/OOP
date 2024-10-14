@@ -5,33 +5,35 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        var shape = new Shape();
-        shape.SetPosition(20, 40);
+        var shape = new Shape(20, 40);
 
-        var rect = new Rectangle
+        var rect = new Rectangle(23, 10)
         {
             Width = 16,
             Height = 16
         };
-        rect.SetPosition(23, 10);
 
-        var circle = new Circle
+        var circle = new Circle(0, 10)
         {
             Radius = 5,
         };
-        circle.SetPosition(0, 10);
 
-        var tri = new Triangle
+        var tri = new Triangle(71, 23)
         {
             Base = 20,
             Height = 5
         };
-        tri.SetPosition(71, 23);
 
-        shape.Draw();
-        rect.Draw();
-        circle.Draw();
-        tri.Draw();
+        var list = new List<Shape>(){
+            shape,
+            rect,
+            circle,
+            tri,
+            new Square(67,78){Width = 4}
+        };
+
+        foreach (var item in list)
+            item.Draw();
 
         Console.WriteLine($"dıkdortgen alan: {rect.Area}\ndıkdortgen cevre: {rect.Circumference}");
         Console.WriteLine();
