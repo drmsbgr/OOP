@@ -14,5 +14,7 @@ var vehicles = new List<Vehicle>(){
 
 vehicles.ForEach(v =>
 {
-    Console.WriteLine($"Marka:{v.Infrastructure}\nModel:{v.Model}\nYıl:{v.Year}\nKoltuk:{v.Seat}\n");
+    Console.WriteLine($"Marka:{v.Infrastructure}\nModel:{v.Model}\nYıl:{v.Year}\nKoltuk:{v.Seat}");
+    v.StartEngine();
+    Console.WriteLine();
 });

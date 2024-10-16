@@ -6,4 +6,9 @@ public abstract class Vehicle(string? ınfrastructure, string? model, int year)
     public string? Model { get; set; } = model;
     public int Year { get; set; } = year;
     public abstract int Seat { get; }
+
+    public virtual void StartEngine()
+    {
+        Console.WriteLine("Motor çalıştı.");
+    }
 }
