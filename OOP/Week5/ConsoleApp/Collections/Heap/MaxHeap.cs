@@ -1,4 +1,4 @@
-namespace ConsoleApp.Models.Heap;
+namespace ConsoleApp.Collections.Heap;
 
 public class MaxHeap<T> : Heap<T> where T : IComparable
 {

@@ -1,4 +1,4 @@
-﻿using ConsoleApp.Models.Heap;
+﻿using ConsoleApp.Collections.Heap;
 
 var heap1 = new MaxHeap<int>();
 heap1.Add(20);
