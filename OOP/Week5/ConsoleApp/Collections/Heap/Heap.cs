@@ -2,7 +2,8 @@ namespace ConsoleApp.Collections.Heap;
 
 public abstract class Heap<T>
 {
-    public abstract int Count { get; }
-    public abstract void Add(T item);
+    protected List<T> Values { get; } = [];
+    public int Count => Values.Count;
+    public void Add(T item) => Values.Add(item);
     public abstract T Extract();
 }
