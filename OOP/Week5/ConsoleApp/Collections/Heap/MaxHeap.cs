@@ -1,6 +1,6 @@
 namespace ConsoleApp.Collections.Heap;
 
-public class MaxHeap<T> : Heap<T> where T : IComparable
+public class MaxHeap<T> : Heap<T> where T : IComparable<T>
 {
     public override T Extract()
     {
