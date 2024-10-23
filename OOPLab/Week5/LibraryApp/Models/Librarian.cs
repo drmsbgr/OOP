@@ -6,11 +6,11 @@ public class Librarian(int ıd)
 
     public void AddBook(Book book)
     {
-        Console.WriteLine($"{book.author} adlı kişinin yazdığı {book.title} adlı kitap kütüphaneye eklendi.");
+        Console.WriteLine($"{book.Author} adlı kişinin yazdığı {book.Title} adlı kitap kütüphaneye eklendi.");
     }
 
     public void RemoveBook(Book book)
     {
-        Console.WriteLine($"{book.author} adlı kişinin yazdığı {book.title} adlı kitap kütüphaneden çıkarıldı.");
+        Console.WriteLine($"{book.Author} adlı kişinin yazdığı {book.Title} adlı kitap kütüphaneden çıkarıldı.");
     }
 }

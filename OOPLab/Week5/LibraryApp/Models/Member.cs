@@ -7,11 +7,11 @@ public class Member(int ıd, string? name = null)
 
     public void BorrowBook(Book book)
     {
-        Console.WriteLine($"{book.title} adlı kıtap ödünç alındı.");
+        Console.WriteLine($"{book.Title} adlı kıtap ödünç alındı.");
     }
 
     public void ReturnBook(Book book)
     {
-        Console.WriteLine($"{book.title} adlı kıtap iade edildi.");
+        Console.WriteLine($"{book.Title} adlı kıtap iade edildi.");
     }
 }

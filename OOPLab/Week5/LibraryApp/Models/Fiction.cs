@@ -6,6 +6,6 @@ public class Fiction(string title, string author, string genre) : Book(title, au
 
     public override string GetDescription()
     {
-        return "";
+        return $"{Title} - {Author} - {Genre}";
     }
 }

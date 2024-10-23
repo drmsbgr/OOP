@@ -6,6 +6,6 @@ public class NonFiction(string title, string author, string subject) : Book(titl
 
     public override string GetDescription()
     {
-        return "";
+        return $"{Title} - {Author} - {Subject}";
     }
 }
