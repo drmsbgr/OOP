@@ -10,6 +10,7 @@ var students = new List<Student>(){
 };
 
 students.ForEach(s => Console.WriteLine(s.GetInfo()));
+
 var ls = (LicenceStudent)students[0];
 ls.PrintSubjects();
 

@@ -2,7 +2,6 @@ namespace UniversityApp.Models;
 
 public abstract class Student
 {
-
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public int No { get; set; }
