@@ -3,7 +3,7 @@ namespace UniversityApp.Models;
 public class DoctorateStudent : Student
 {
     public string? ResearchSubject { get; set; }
-    public DoctorateStudent(string? firstName, string? lastName, string? researchSubject = null) : base(firstName, lastName)
+    public DoctorateStudent(string? firstName, string? lastName, int no, string? researchSubject = null) : base(firstName, lastName, no)
     {
         ResearchSubject = researchSubject;
     }

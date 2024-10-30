@@ -3,7 +3,7 @@ namespace UniversityApp.Models;
 public class LicenceStudent : Student
 {
     public int Semester { get; set; }
-    public LicenceStudent(string? firstName, string? lastName, int semester) : base(firstName, lastName)
+    public LicenceStudent(string? firstName, string? lastName, int no, int semester) : base(firstName, lastName, no)
     {
         Semester = semester;
     }

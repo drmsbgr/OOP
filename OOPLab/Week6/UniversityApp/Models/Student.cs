@@ -8,10 +8,11 @@ public abstract class Student
     public int No { get; set; }
     public string? Department { get; set; }
 
-    public Student(string? firstName, string? lastName)
+    public Student(string? firstName, string? lastName, int no)
     {
         this.FirstName = firstName;
         this.LastName = lastName;
+        this.No = no;
     }
 
     public Student(string? firstName, string? lastName, int no, string? department)

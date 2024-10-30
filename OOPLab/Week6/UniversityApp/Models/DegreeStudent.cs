@@ -3,7 +3,7 @@ namespace UniversityApp.Models;
 public class DegreeStudent : Student
 {
     public string? Advisor { get; set; }
-    public DegreeStudent(string? firstName, string? lastName, string? advisor) : base(firstName, lastName)
+    public DegreeStudent(string? firstName, string? lastName, int no, string? advisor) : base(firstName, lastName, no)
     {
         Advisor = advisor;
     }
