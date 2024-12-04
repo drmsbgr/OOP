@@ -16,9 +16,9 @@ namespace StudentManagementApp.Models
         {
             return format switch
             {
-                "1" => $"Ad-Soyad:{FirstName} {LastName?.ToUpper()}",
-                "2" => $"Ad-Soyad:{FirstName} {LastName?.ToUpper()} - Bölüm:{Department}",
-                _ => $"Ad-Soyad:{FirstName} {LastName?.ToUpper()} - No:{No} - Bölüm:{Department}",
+                "1" => $"Ad-Soyad: {FirstName} {LastName?.ToUpper()}",
+                "2" => $"Ad-Soyad: {FirstName} {LastName?.ToUpper()} - Bölüm: {Department}",
+                _ => $"Ad-Soyad: {FirstName} {LastName?.ToUpper()} - No: {No} - Bölüm: {Department}",
             };
         }
     }

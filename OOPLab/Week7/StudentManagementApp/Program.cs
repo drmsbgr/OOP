@@ -9,12 +9,11 @@ var students = new StudentCollection
     new Student("Sıla", "Yılmaz", "Hukuk", 23153)
 };
 
-Console.WriteLine($"{students[0]:1}");
-Console.WriteLine();
-Console.WriteLine($"{students[1]}");
-Console.WriteLine();
-Console.WriteLine($"{students[2]:2}");
-Console.WriteLine();
-Console.WriteLine($"{students[3]:1}");
-Console.WriteLine();
-Console.WriteLine($"{students[4]:2}");
+foreach (var item in students)
+    Console.WriteLine(item);
+
+var student = (Student)students[1].Clone();
+
+Console.WriteLine(student.ToString("1", null));
+Console.WriteLine(student.ToString("2", null));
+Console.WriteLine(student.ToString("", null));
