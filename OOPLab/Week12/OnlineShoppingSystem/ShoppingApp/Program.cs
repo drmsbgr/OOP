@@ -16,6 +16,8 @@ var product4 = productRepo.Add(new Product(4, "Tost Makinesi", 3000));
 var product5 = productRepo.Add(new Product(5, "Tablet", 16000));
 var product6 = productRepo.Add(new Product(6, "Laptop", 42000));
 
+productRepo.Remove(product6);
+
 var order1 = orderRepo.Add(new Order()
 {
     Id = 1,
