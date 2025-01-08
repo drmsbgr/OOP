@@ -49,7 +49,7 @@ static void PrintProducts(IEnumerable<Product> collection)
     foreach (var item in collection)
     {
         System.Console.WriteLine("-------------");
-        Console.WriteLine($"ID:{item.Id,-5}\nNAME:{item.Name,-5} PRICE:{item.Price,-5} STOCK:{item.Stock,-5}");
+        Console.WriteLine($"ID:{item.Id,-5}\nNAME:{item.Name,-5} PRICE:{item.Price,-5:C} STOCK:{item.Stock,-5}");
         System.Console.WriteLine("-------------");
     }
 }
