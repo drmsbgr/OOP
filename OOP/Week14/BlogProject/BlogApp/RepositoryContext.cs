@@ -1,7 +1,23 @@
 using Microsoft.EntityFrameworkCore;
 using BlogApp.Entities;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BlogApp;
+
+public class CategoryConfiguration : IEntityTypeConfiguration<Category>
+{
+    public void Configure(EntityTypeBuilder<Category> builder)
+    {
+        builder.HasKey(c => c.Id);
+        builder.HasData(
+            new Category(1, "Oyun"),
+            new Category(2, "Sinema"),
+            new Category(3, "Spor")
+            );
+
+        builder.HasMany(c => c.Contents);
+    }
+}
 
 public class RepositoryContext : DbContext
 {
@@ -15,15 +31,6 @@ public class RepositoryContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
-        modelBuilder.Entity<Category>().HasKey(c => c.Id);
-        modelBuilder.Entity<Category>().HasData(
-            new Category(1, "Oyun"),
-            new Category(2, "Sinema"),
-            new Category(3, "Spor")
-            );
-
-        modelBuilder.Entity<Category>().HasMany(c => c.Contents);
 
         modelBuilder.Entity<Content>().HasKey(e => e.Id);
         modelBuilder.Entity<Content>().HasData(
